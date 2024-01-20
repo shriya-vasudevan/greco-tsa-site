@@ -1,5 +1,5 @@
 import Image from "next/image";
-//import Windmill from "/windmill.svg";
+import { inter, lato } from '@/app/ui/fonts';
 
 export default function Home () {
   return (

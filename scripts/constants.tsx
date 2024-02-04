@@ -1,9 +1,9 @@
 export const NAV_LINKS = [
-    { href: "/app/page.tsx", label: "Home" },
-    { href: "/app/about/page.tsx", label: "About" },
-    { href: "/app/details/page.tsx", label: "Details" },
-    { href: "/app/products/page.tsx", label: "Products" }, // note: maybe not for regionals. API > ?
-    { href: "/app/gaia/page.tsx", label: "GAIA" },
-    { href: "/app/news/page.tsx", label: "News" }
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/details", label: "Details" },
+    { href: "/products", label: "Products" }, // note: maybe not for regionals. API > ?
+    { href: "/gaia", label: "GAIA" },
+    { href: "/news", label: "News" }
 ];
 

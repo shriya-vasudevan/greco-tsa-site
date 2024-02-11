@@ -18,8 +18,8 @@ export default async function News () {
                 {data.articles.map((i: { [key: string]: string; }) => {
                     return (
                         <div>
-                            <a href={i.url}>
-                                <img src={i.urlToImage}></img>
+                            <a key={i.title} href={i.url}>
+                                <img src={i.urlToImage} alt={i.description}></img>
                                 <h2>{i.title}</h2>
                                 <p>{i.publishedAt}</p>
                                 <p>{i.description}</p>

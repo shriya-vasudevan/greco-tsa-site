@@ -12,7 +12,7 @@ const Nav = () => {
                     <Image src="/logo.svg" width="169" height="57" alt=""/>
                 </Link>
                 {NAV_LINKS.map((a) => (
-                    <Link href={a.href}>
+                    <Link key={a.label} href={a.href}>
                         {a.label}
                     </Link>
                 ))}

@@ -37,7 +37,7 @@ export default function GAIA () {
 
   return (
     <main>
-      <h2>Hi there, I'm <span>GAIA</span>. What can I help you with today?</h2>
+      <h2>Hi there, I&apos;m <span>GAIA</span>. What can I help you with today?</h2>
       <section>        
         <p>{chats[chats.length - 1]}</p>
       </section>

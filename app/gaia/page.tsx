@@ -39,7 +39,7 @@ export default function GAIA () {
     <main>
       <h2>Hi there, I'm <span>GAIA</span>. What can I help you with today?</h2>
       <section>        
-        {chats.map((i) => <p>{i}</p>)}
+        <p>{chats[chats.length - 1]}</p>
       </section>
 
       <div className={isTyping ? "" : "hide"}>

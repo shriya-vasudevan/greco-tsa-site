@@ -8,7 +8,7 @@ const Nav = () => {
     return(
         <nav className="flexBetween items-center max-container padding-container relative z-5 py-5 text-white">
             <ul className="hidden h-full gap-12 lg:flex">
-                <Link href="/app/page.tsx" key="1">
+                <Link href="/" key="1">
                     <Image src="/logo.svg" width="169" height="57" alt=""/>
                 </Link>
                 {NAV_LINKS.map((a) => (

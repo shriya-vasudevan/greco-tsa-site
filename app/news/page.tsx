@@ -26,7 +26,7 @@ export default async function News () {
                             </a>
                         </div>
                     );
-                })};
+                })}
             </div>
              {/* <div className="">
                 {data.articles.map((i) => {

@@ -2,7 +2,7 @@
 
 import "dotenv/config";
 
-async function news (): Promise<any> {
+async function news () {
     const req = await fetch(`https://newsapi.org/v2/everything?q='green energy'&apiKey=${process.env.NEWS_API_KEY}`);
     const resp = await req.json();
     return resp;

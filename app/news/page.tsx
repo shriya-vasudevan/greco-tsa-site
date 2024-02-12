@@ -14,6 +14,20 @@ export default async function News () {
     return (
         <>
             <h1>Latest News</h1>
+            <div className="">
+                {data.articles.map((i: any) => {
+                    return (
+                        <div key={i.title}>                        
+                            <a href={i.url}>
+                                <img src={i.urlToImage} alt={i.description}></img>
+                                <h2>{i.title}</h2>
+                                <p>{i.publishedAt}</p>
+                                <p>{i.description}</p>
+                            </a>
+                        </div>
+                    );
+                })};
+            </div>
              {/* <div className="">
                 {data.articles.map((i) => {
                     return (

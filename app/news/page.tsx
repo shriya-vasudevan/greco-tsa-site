@@ -8,7 +8,7 @@ async function news () {
     return resp;
 }; 
 
-export default /* async */ function News () {
+export default async function News () {
     const data = await news();
 
     return (

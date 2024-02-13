@@ -1,5 +1,3 @@
-// "use server"
-
 import "dotenv/config";
 
 async function news () {
@@ -31,34 +29,6 @@ export default async function News () {
                     <p>Loading...</p>
                 )}
             </div>
-            {/* <div className="">
-                {data.articles?.map((i: { title: string, url: string, urlToImage: string, description: string, publishedAt: string }) => {
-                    return (
-                        <div key={i.title}>                        
-                            <a href={i.url}>
-                                <img src={i.urlToImage} alt={i.description}></img>
-                                <h2>{i.title}</h2>
-                                <p>{i.publishedAt}</p>
-                                <p>{i.description}</p>
-                            </a>
-                        </div>
-                    );
-                })}
-            </div> */}
-             {/* <div className="">
-                {data.articles.map((i) => {
-                    return (
-                        <div key={i.title}>
-                            <a key={i.title} href={i.url}>
-                                <img key={i.title} src={i.urlToImage} alt={i.description}></img>
-                                <h2 key={i.title}>{i.title}</h2>
-                                <p key={i.title}>{i.publishedAt}</p>
-                                <p key={i.title}>{i.description}</p>
-                            </a>
-                        </div>
-                    );
-                })}
-            </div> */}
         </>
     );
 };

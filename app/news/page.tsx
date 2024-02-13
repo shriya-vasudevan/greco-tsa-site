@@ -12,7 +12,6 @@ export default async function News () {
     return (
         <>
             <h1>Latest News</h1>
-            <h2>{process.env.NEWS_API_KEY}</h2>
             <div className="">
                 {data.articles ? (
                     data.articles.map((i: { title: string, url: string, urlToImage: string, description: string, publishedAt: string }) => {

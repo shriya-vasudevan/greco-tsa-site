@@ -1,15 +1,15 @@
-"use server"
+// "use server"
 
-import "dotenv/config";
+// import "dotenv/config";
 
-async function news () {
+/* async function news () {
     const req = await fetch(`https://newsapi.org/v2/everything?q='green energy'&apiKey=${process.env.NEWS_API_KEY}`);
     const resp = await req.json();
     return resp;
-};
+}; */
 
-export default async function News () {
-    const data = await news();
+export default /* async */ function News () {
+    // const data = await news();
 
     return (
         <>

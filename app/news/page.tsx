@@ -1,3 +1,5 @@
+"use server"
+
 import "dotenv/config";
 
 async function news () {

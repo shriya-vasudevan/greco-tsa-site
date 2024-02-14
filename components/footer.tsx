@@ -8,7 +8,7 @@ const Footer = () => {
                 <div>                        
                     <ul className="space-y-1">
                         {NAV_LINKS.map((a) => (
-                            <li key={}>
+                            <li key={a.label}>
                                 <Link key={a.label} href={a.href}>
                                     {a.label}
                                 </Link>

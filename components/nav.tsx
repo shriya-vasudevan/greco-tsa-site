@@ -1,18 +1,20 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS } from "@/scripts/constants";
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"
+import { CheckPath } from "@/scripts/check-path";
+// import { FaBars, FaTimes } from "react-icons/fa"
 
-const Nav = () => {
+export default function Nav () {
     return(
-        <nav className="flexBetween items-center max-container padding-container relative z-5 py-5 text-white">
-            <ul className="hidden h-full gap-12 lg:flex">
-                <Link href="/" key="1">
-                    <Image src="/logo.svg" width="169" height="57" alt=""/>
+        <nav className="flexBetween items-center max-container padding-container relative z-5 py-8 px-8 text-white">
+            <ul className="h-full gap-12 lg:flex">
+                <Link className="mr-70 " href="/" key="1">
+                    <Image src="/logo.svg" width="127" height="43" alt=""/>
                 </Link>
                 {NAV_LINKS.map((a) => (
-                    <Link key={a.label} href={a.href}>
+                    <Link key={a.label} href={a.href} className={ CheckPath(a.href) ? "underline underline-offset-8 decoration-green-50 font-semibold" : ""}>
                         {a.label}
                     </Link>
                 ))}
@@ -20,5 +22,3 @@ const Nav = () => {
         </nav>
     );
 };
-
-export default Nav;

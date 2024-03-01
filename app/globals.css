@@ -1,16 +1,21 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@layer base {
-  :root {
-    /* bg-green-200; */
+/* @layer base {
+  /* html {
+    background-color: black;
+  } */
+  /* :root {
+    --background: black-50;
+    /* html {
+      background-color: black;
+    } */
     
-  }
+  /* }
   .dark {
-
+    --background: white-50;
   }
-}
+} */
 
 /* :root {
   
@@ -24,8 +29,24 @@
 
 body {
   
+} */
+
+@layer base {
+  html {
+    @apply bg-black-50;
+    @apply text-white-50;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, p {
+    margin-left: 5%;
+  }
 }
 
-@layer utilities {
-  
-} */
+/* @layer utilities { */
+  .stroke-text {
+    font-weight: bold;
+    -webkit-text-stroke: 1px #F6F6F650;
+    font-size: 30vw;
+    -webkit-text-fill-color: transparent;
+  }
+/* } */

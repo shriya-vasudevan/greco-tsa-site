@@ -1,0 +1,125 @@
+
+/*                            <div>
+                                <Card placeholder=""
+                                    shadow={false}
+                                    className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
+                                >
+                                    <CardHeader placeholder=""
+                                        floated={false}
+                                        shadow={false}
+                                        color="transparent"
+                                        className={`absolute inset-0 m-0 h-full w-full rounded-none bg-[url(${i.url})] bg-cover bg-center`}
+                                    >
+                                        <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
+                                    </CardHeader>
+                                    <CardBody placeholder="" className="relative py-14 px-6 md:px-12">
+                                            <h2>{i.title}</h2>
+                                            <p>{i.publishedAt}</p>
+                                            <p>{i.description}</p>
+                                    </CardBody>
+                                </Card>
+                            </div> */
+
+"use server"
+
+import "dotenv/config";
+/* import {
+    Card,
+    CardHeader,
+    CardBody,
+    Typography,
+  } from "@material-tailwind/react"; */
+
+async function news () {
+    const req = await fetch(`https://newsapi.org/v2/everything?q='green energy'&apiKey=${process.env.NEWS_API_KEY}`);
+    const resp = await req.json();
+    return resp;
+}; 
+
+                            /* <div key={i.title}>                        
+                                <a href={i.url}>
+                                    <img src={i.urlToImage} alt={i.description}></img>
+                                    <h2>{i.title}</h2>
+                                    <p>{i.publishedAt}</p>
+                                    <p>{i.description}</p>
+                                </a>
+                        </div> */   
+
+export default async function News () {
+    const data = await news();
+ 
+    return (
+        <>
+            <h1>Latest News</h1>
+            <div className="">
+                {data.articles ? (
+                    data.articles.map((i: { title: string, url: string, urlToImage: string, description: string, publishedAt: string }) => {
+                        return (                      
+                            <div key={i.title}>                        
+                                    <a href={i.url}>
+                                        <img src={i.urlToImage} alt={i.description}></img>
+                                        <h2>{i.title}</h2>
+                                        <p>{i.publishedAt}</p>
+                                        <p>{i.description}</p>
+                                    </a>
+                            </div>
+                        );
+                })) : (
+                    <p>Loading...</p>
+                )}
+            </div>
+        </>
+    );
+};
+
+/*                             <div>
+                                <Card placeholder=""
+                                    shadow={false}
+                                    className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
+                                >
+                                    <CardHeader placeholder=""
+                                        floated={false}
+                                        shadow={false}
+                                        color="transparent"
+                                        className="absolute inset-0 m-0 h-full w-full rounded-none bg-[url('/windmill.svg')] bg-cover bg-center"
+                                    >
+                                        <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
+                                    </CardHeader>
+                                    <CardBody placeholder="" className="relative py-14 px-6 md:px-12">
+                                            <h2>{i.title}</h2>
+                                            <p>{i.publishedAt}</p>
+                                            <p>{i.description}</p>
+                                    </CardBody>
+                                </Card>
+                            </div>
+                            */
+   
+  /* export function BackgroundBlogCard() {
+    return (
+      <Card placeholder=""
+        shadow={false}
+        className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
+      >
+        <CardHeader placeholder=""
+          floated={false}
+          shadow={false}
+          color="transparent"
+          className=`absolute inset-0 m-0 h-full w-full rounded-none bg-[url({i.url})] bg-cover bg-center`
+        >
+          <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
+        </CardHeader>
+        <CardBody placeholder="" className="relative py-14 px-6 md:px-12">
+          <Typography placeholder=""
+            variant="h2"
+            color="white"
+            className="mb-6 font-medium leading-[1.5]"
+          >
+            How we design and code open-source projects?
+          </Typography>
+          <Typography placeholder="" variant="h5" className="mb-4 text-gray-400">
+            Tania Andrew
+          </Typography>
+        </CardBody>
+      </Card>
+    );
+  } */

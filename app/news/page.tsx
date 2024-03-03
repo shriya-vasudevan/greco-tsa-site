@@ -2,11 +2,7 @@
 
 import "dotenv/config";
 
-import {
-    Card,
-    CardHeader,
-    CardBody
-  } from "@material-tailwind/react";
+import { Card, CardHeader, CardBody } from "@material-tailwind/react";
 
 async function news () {
     const req = await fetch(`https://newsapi.org/v2/everything?q='green energy'&apiKey=${process.env.NEWS_API_KEY}`);
@@ -16,10 +12,6 @@ async function news () {
 
 export default async function News () {
     const data = await news();
-
-    const images = {
-
-    };
  
     return (
         <>

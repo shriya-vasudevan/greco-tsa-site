@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 /* @layer base {
   /* html {
@@ -42,11 +43,11 @@ body {
   }
 }
 
-/* @layer utilities { */
+@layer utilities {
   .stroke-text {
     font-weight: bold;
     -webkit-text-stroke: 1px #F6F6F650;
     font-size: 30vw;
     -webkit-text-fill-color: transparent;
   }
-/* } */
+}

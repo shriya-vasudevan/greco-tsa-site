@@ -21,7 +21,7 @@ const config: Config = {
         black: {
           50: "#16211B"
         }
-      },
+      }
     },
   },
   plugins: [],

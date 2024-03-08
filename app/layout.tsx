@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter } from "@/app/ui/fonts";
+import { lato } from "@/app/ui/fonts";
 import "./globals.css";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
@@ -15,11 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        < Nav />
+    <html lang="en" className="antialiased">
+      <body className={lato.className}>
+        <Nav />
         <main>{children}</main>
-        < Footer />
+        <Footer />
       </body>
     </html>
   );

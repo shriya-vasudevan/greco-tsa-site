@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Title from "@/components/title";
-import { inter, lato } from '@/app/ui/fonts';
 
 export default function Home () {
   return (

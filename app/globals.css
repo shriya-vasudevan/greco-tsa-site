@@ -41,6 +41,9 @@ body {
   h1, h2, h3, p {
     margin-left: 5%;
   }
+  h1, h2, h3 {
+    font-family: inter, arial, Helvetica, verdana, sans-serif;
+  }
 }
 
 @layer utilities {
@@ -49,5 +52,10 @@ body {
     -webkit-text-stroke: 1px #F6F6F650;
     font-size: 30vw;
     -webkit-text-fill-color: transparent;
+  }
+  .h1 {
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    font-size: 40px;
   }
 }

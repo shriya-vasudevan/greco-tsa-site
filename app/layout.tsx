@@ -18,8 +18,8 @@ export default function RootLayout({
     <html lang="en" className="antialiased">
       <body className={lato.className}>
         <Nav />
-        <main>{children}</main>
-        <Footer />
+        <main className="min-w-screen min-h-screen overflow-x-hidden">{children}</main>
+        < Footer />
       </body>
     </html>
   );

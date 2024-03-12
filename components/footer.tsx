@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Footer () {
     return(
-        <footer className="relative w-full">
-            <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-green-200 text-center md:justify-between">
+        <footer className="inline-block w-screen">
+            <div className="p-4 px-14 flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-green-200 text-center md:justify-between">
                 <Link href="/" key="1">
                     <Image src="/logo.svg" width="110" height="37" alt=""/>
                 </Link>                

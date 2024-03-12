@@ -35,7 +35,7 @@
     ".next/types/**/*.ts",
     "scripts/news-api.js",
     "app/gaia/page.tsx"
-  ],
+, "tailwind.config.ts"  ],
   "exclude": [
     "node_modules"
   ]

@@ -21,7 +21,7 @@ export default function Footer () {
                     </ul>
                 </div>
                 <hr className="my-8 border-white-50" />
-                <p>© 2024 Shriya M. Vasudevan, PCHS TSA. All rights reserved.</p>
+                <p className="w-full text-center 2xl:w-fit text-left">© 2024 Shriya M. Vasudevan, PCHS TSA. All rights reserved.</p>
             </div>
         </footer>
     );

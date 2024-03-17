@@ -49,7 +49,7 @@ export default function GAIA () {
       </div>
       <h2 className="relative px-4 text-lg font-medium text-center m-0">Hi there, I&apos;m<span> </span>
         <span className="text-green-50 cursor-pointer">
-          <Tooltip className="bg-black-50 text-white-50 p-8 w-96 text-center" content="Geo Artificial Intelligence Assistant (GAIA) is a AI model built to help homeowners find economic green energy solutions. However, GAIA can also be used for... More fun purposes!" placement="top">
+          <Tooltip className="bg-black-50 text-white-50 p-8 w-96 text-center" content="Geo Artificial Intelligence Assistant (GAIA) is an AI model built to help homeowners find economic green energy solutions. However, GAIA can also be used for... More fun purposes!" placement="top">
             GAIA
           </Tooltip>
         </span>. What can I help you with today?

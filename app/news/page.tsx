@@ -11,7 +11,7 @@ async function news () {
 
 export default async function News () {
     const data = await news();
- 
+
     return (
         <>
             <h1 className="mt-10 pl-8 h1 border-green-50 border-l-4">Latest News</h1>

@@ -20,7 +20,7 @@ export default function Home () {
           </Link>
         </div>        
         <Image className="h-full object-cover object-left absolute top-0 right-0 w-2/4 -z-50" src="/circlez.svg" width="546" height="832" alt=""/>
-        <div className="hidden 2xl:block absolute bottom-14 left-14 bg-transparent border-green-50 border-l-2 border-b-2 h-16 w-2/4 p-0"></div>
+        {/* <div className="hidden 2xl:block absolute bottom-14 left-14 bg-transparent border-green-50 border-l-2 border-b-2 h-16 w-2/4 p-0"></div> */}
         <svg className="hidden lg:block fill-green-100 absolute bottom-0 right-0 -z-50" width="500" viewBox="0 0 539 759" xmlns="http://www.w3.org/2000/svg">
           <path d="M268.767 717.143C186.343 711.659 72.9569 721.905 1 760H547V660C478.532 692.035 335.927 717.143 268.767 717.143Z"/>
           <path d="M375.5 202L391.521 733H359.479L375.5 202Z"/>

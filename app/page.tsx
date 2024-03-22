@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import { SOURCE_LINKS } from "@/scripts/constants";
+import { SOURCE_LINKS, CARD_CONTENT } from "@/scripts/constants";
+import { Card, CardBody } from "@material-tailwind/react";
+
 
 export default function Home () {
   return (
@@ -45,9 +47,24 @@ export default function Home () {
         ))}
       </div>
       <hr className="relative m-14 border-green-50"></hr> 
+      <div className="mt-8 relative gap-20 ml-16 lg:ml-0 lg:flex w-full items-center justify-center">
+        {CARD_CONTENT.map((b) => (
+          <Link key="1" href={b.link}>
+            <Card placeholder="" className="mt-6 w-96">
+              <CardBody className="inline-flex flex-col gap-8 text-center items-center justify-center" placeholder="" >
+                <div dangerouslySetInnerHTML={{ __html: b.svg}}></div>
+                <h2 className="tracking-widest text-center font-bold text-lg text-green-50">{b.title}</h2>
+                <p className="text-white-50">{b.content}</p>            
+                <FaArrowRight className="text-green-50 text-lg"/>
+              </CardBody>
+            </Card>
+          </Link>
+        ))}
+      </div>
+      <hr className="relative m-14 border-green-50"></hr> 
       <div className="">
-        <h1 className="mt-10 pl-8 h1 border-green-50 border-l-4">Mission</h1>  
-        <div className="relative float-right w-96 h-full m-8">
+        <h1 className="mt-10 pl-8 h1">Mission</h1>  
+        <div className="relative float-right w-96 h-full m-8 mt-0">
           <div className="h-96 w-48 bg-green-50 absolute right-40 top-8 -z-10"></div>
           <Image className="h-96 w-48 object-cover m-14" src="/images/home.png" alt="windmill" height={1080} width={1920}/>
           <div className="h-96 w-48 bg-green-150/30 m-14 absolute right-20 top-0"></div>

@@ -22,7 +22,7 @@ export default function Nav () {
     ))
   );
 
-    return(
+    return (
         <nav className={CheckPath("/") ? "relative min-w-screen" : "min-w-screen relative bg-black-50 h-28 shadow-[0_0_8px_16px_rgba(0,0,0,0.3)]"}>
             <div className="ml-14 pl-0 p-8 py-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <Link className="flex items-center space-x-3" href="/" key="1">
